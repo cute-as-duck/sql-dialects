@@ -1,0 +1,20 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="ArtGallery">
+        <description>Persistence unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>art.gallery.models.Artist</class>
+        <class>art.gallery.models.Work</class>
+        <class>art.gallery.models.Exhibition</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/hibernate_art_gallery"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="123"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

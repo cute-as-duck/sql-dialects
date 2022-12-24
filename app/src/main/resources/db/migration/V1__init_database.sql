@@ -1,0 +1,16 @@
+CREATE TABLE artist (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE work (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    title VARCHAR(30) NOT NULL,
+    artist_id BIGINT REFERENCES artist(id)
+);
+
+CREATE TABLE exhibition (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    title VARCHAR NOT NULL,
+);
